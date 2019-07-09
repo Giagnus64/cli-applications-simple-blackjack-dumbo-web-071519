@@ -45,7 +45,7 @@ def hit?(card_total)
     next_card = deal_card
     card_total += next_card
   elsif (user_input == 's')
-    return card_total
+    return nil
   else
     invalid_command
     prompt_user
@@ -56,7 +56,6 @@ end
 def invalid_command
   # code invalid_command here
   puts "Please enter a valid command"
-
 end
 
 #####################################################
@@ -68,5 +67,5 @@ def runner
   welcome
   card_total = initial_round
   hit?(card_total)
-  
+
 end
